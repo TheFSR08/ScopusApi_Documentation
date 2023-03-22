@@ -1,0 +1,81 @@
+Que es Scopus? --------------------------------------------------------------
+
+Al ser una base de datos que indiza resúmenes y citas, Scopus captura
+artículos que su publican en casi todas las revistas académicas importantes
+en el mundo; y la creación de perfiles de autores y instituciones hace que sea
+fácil encontrar nuevos artículos de los mismos.
+
+• La Scopus UI (interfaz de usuario) ofrece muchas funcionalidades en ese
+sentido, permitiendo a bibliotecarios, investigadores, desarrolladores y
+grupos de business intelligence encontrar manualmente publicaciones
+creadas en su institución que luego pueden añadir a sus sistemas.
+
+• Además de la interfaz de usuario, Scopus también tiene Application
+Programming Interfaces (APIs), que ofrecen las mismas funcionalidades pero
+en un formato legible por máquinas que permite que un software encuentre
+artículos, autores e instituciones en Scopus en lugar de que lo haga un
+humano a través de la UI (Interfaz de usuario).
+
+• Esto permite que los desarrolladores escriban programas que extraen los
+datos automáticamente de Scopus y luego la añaden a sus propios sistemas.
+
+Modelo de datos ------------------------------------
+ El modelo de datos de scopus esta diseñado alrededor de la nocion que los articulos estan escritos por sus autores 
+ que a su vez estan afiliados con instituciones. De una forma visual y simplificada, podemos representar el modelo 
+ de la siguiente forma.
+ 
+                         Articulo
+                       /          \
+                   Autor          Afiliacion
+                   
+             Este es un modelo de datos simplificado
+             
+             
+             
+             Estas son algunas de las API que maneja Scopus
+• Scopus Query API                       ///////////////////////////////////
+• Abstract Citation Count API           ///////////////////////////////////
+• Abstract Citations API                //////////////////////////////////
+• Abstract Retrieval API
+• Affiliation Search API
+• Affiliation Retrieval API
+• Author Search API
+• Author Retrieval API
+
+///////////////*********************************************\\\\\\\\\\\\\\\\\\\\\\\\
+             
+             En esta parte veremos como se genera una llamada a una API
+             
+Llamar a una API REST es como visitar una página web con su navegador, excepto que:
+
+• No se utiliza un navegador para ir a la dirección web manualmente, sino que hay
+que escribir un programa informático que va a la dirección de forma automática a
+través de un script.
+• La dirección normalmente contiene algunas variables que especifican los
+parámetros que queremos recoger.
+• Lo que se recoge de la API no es un archivo HTML que se muestra en un
+navegador, sino XML (otro formato) que es procesado por el programa
+informático.
+• Las APIs normalmente no utilizan usuarios o contraseñas, sino una APIKey y
+tokens de acceso.
+
+Primero de todo: debe conseguir una APIKey en --- dev.elsevier.com -----
+
+• Una vez ha registrado su página web o aplicación, se le entregará una APIKey que tiene
+derechos de acceso a diversas APIs de Elsevier.
+
+• Lea la documentación para entender las capacidades de la API.
+
+• Escriba su aplicación/programa para hacer llamadas a la API utilizando los parámetros
+correctos y su APIKey, y para mostrar las respuestas de la API en su página web o
+aplicación.
+
+                UN EJEMPLO DE PETICION ES LA SIGUIENTE
+                
+       
+       Queremos recoger  registros de Scopus escritos por cualquiera que 
+       tenga un apellido en especifico en alguna reviste se de lengua spañola o de quimica
+        yo como solicitador debo registrarme para conseguir mi ApiKey en developers.elsevier.com
+        ahi registraremos un proyecto luego nos empaparemos de la documentacion para saber aun mas 
+        de la Api y de como saber estructurar la llamada a la misma.
+                        
